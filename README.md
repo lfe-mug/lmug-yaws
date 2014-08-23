@@ -2,7 +2,7 @@
 
 *An lmug adapter that uses the YAWS embedded web server*
 
-<img src="resources/images/lmugyaws-small-grey.png" />
+<img src="resources/images/lmug-yaws.png" />
 
 
 ## Introduction
@@ -16,7 +16,6 @@ This is a module for running a YAWS embedded server as an
 Just add it to your ``rebar.config`` deps:
 
 ```erlang
-
     {deps, [
         ...
         {lmug-yaws, ".*", {git, "git@github.com:lfex/lmug-yaws.git", "master"}}
