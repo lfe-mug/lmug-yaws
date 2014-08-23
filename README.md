@@ -7,7 +7,8 @@
 
 ## Introduction
 
-This is a module for running a YAWS embedded server as an
+This is a module for running a
+[YAWS](http://yaws.hyber.org/) embedded server as an
 [lmug adapter](https://github.com/lfex/lmug/blob/master/doc/SPEC.md#adapters).
 
 
