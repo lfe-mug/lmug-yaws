@@ -33,3 +33,42 @@ And then do the usual:
 
 ## Usage
 
+NOTE: the example below does not yet work; this lmud adapter is a work in
+progress.
+
+### Hello World
+
+```cl
+> (slurp "src/lmug-yaws.lfe")
+#(ok lmug-yaws)
+> (defun handler (request)
+    (make-response
+      status 200
+      headers '(#(content_type "text/plain"))
+      body "Hello World"))
+handler
+> (run-yaws #'handler/1)
+#(ok <0.55.0>)
+```
+
+To check your new hanlder:
+
+```bash
+$ curl -D- -X GET http://localhost:1206/
+HTTP/1.1 200 OK
+Server: inets/5.10.2
+Date: Thu, 28 Aug 2014 20:30:52 GMT
+Content-Length: 11
+Content-Type: text/plain
+
+Hello World
+```
+
+If you want to run on a non-default port (or pass other options) or if you
+are using with other projects, please use the adapter module directly. For
+example:
+
+```cl
+(lmug-yaws-adapter:run #'handler/1 '(#(port 8000)))
+#(ok <0.54.0>)
+```
