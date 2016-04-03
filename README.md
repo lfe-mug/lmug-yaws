@@ -1,8 +1,11 @@
 # lmug-yaws
 
-*An lmug adapter that uses the YAWS embedded web server*
+[![][lmug-logo]][lmug-logo-large]
 
-<img src="resources/images/lmug-yaws.png" />
+[lmug-logo]: resources/images/lmug-yaws.png
+[lmug-logo-large]: resources/images/lmug-yaws-large.png
+
+*An lmug adapter that uses the YAWS embedded web server*
 
 
 ## Introduction
